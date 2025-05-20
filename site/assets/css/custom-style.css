@@ -1,0 +1,188 @@
+/* Estilos personalizados para tornar o site mais moderno */
+
+/* Efeitos para os cards de produtos */
+.portfolio-item {
+    transition: all 0.3s ease;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Melhoria nas imagens dos produtos */
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    text-align: center;
+    height: 240px; /* Altura fixa para todas as imagens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-image img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    transition: all 0.5s ease;
+    padding: 15px;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.08);
+}
+
+.portfolio-overlay {
+    background-color: rgba(37, 211, 103, 0.85) !important;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-desc {
+    background-color: #fff;
+    padding: 15px !important;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+}
+
+.portfolio-desc:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #25D367 0%, #1d9e4e 100%);
+    transition: width 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-desc:after {
+    width: 100%;
+}
+
+.portfolio-desc h3 {
+    font-weight: 600 !important;
+    margin-bottom: 5px !important;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Melhorias no botão de subir ao topo */
+#gotoTop {
+    background-color: #25D367;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    transition: all 0.3s ease;
+}
+
+#gotoTop:hover {
+    background-color: #1d9e4e;
+    transform: translateY(-5px);
+}
+
+/* Melhorias para o menu */
+#primary-menu ul li:hover > a {
+    color: #25D367 !important;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+    .portfolio-item {
+        margin-bottom: 15px !important;
+    }
+    
+    #header.sticky-header #header-wrap {
+        background-color: rgba(255,255,255,0.95);
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+}
+
+/* Melhorias na seção de portfólio/produtos */
+#secao-portfolio {
+    padding: 80px 0 40px !important;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+#secao-portfolio:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, #25D367 0%, #1d9e4e 100%);
+}
+
+.portfolio-nomargin {
+    margin: 0 -10px;
+}
+
+.portfolio.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    width: calc(33.333% - 30px) !important;
+    margin: 15px !important;
+}
+
+/* Responsividade para os itens de portfólio */
+@media (max-width: 991px) {
+    .portfolio-item {
+        width: calc(50% - 30px) !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-item {
+        width: 100% !important;
+        max-width: 350px;
+        margin: 15px auto !important;
+    }
+}
+
+/* Cores e efeitos globais */
+.button {
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.heading-block h2 {
+    font-weight: 700 !important;
+}
+
+.heading-block:after {
+    background-color: #25D367;
+    height: 3px;
+    width: 80px;
+    margin-top: 30px;
+}
+
+/* Efeito de destaque para contatos */
+.widget abbr {
+    color: #25D367;
+}
